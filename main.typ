@@ -9,7 +9,6 @@
 
 #show link: set text(size: 8pt)
 #show link: underline
-#show heading: set text(weight: "black", size: 15pt)
 
 // Portada
 #[
@@ -26,7 +25,11 @@
 
 // Índice
 #pagebreak()
-#outline()
+#[
+  #set page(columns: 2)
+  #set text(size: 10pt)
+  #outline()
+]
 #pagebreak()
 
 // Content

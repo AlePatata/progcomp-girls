@@ -1,6 +1,7 @@
-# 📚 USM Competitive Programming Handbook
+# Super apunte uchile girlss
+Usamos de base el Handbook de la USM, le damos los créditos y los agradecimientos correspondientesss, super recomendamos echarle un ojito:
 
-A comprehensive collection of algorithms and data structures for competitive programming, maintained by Universidad Técnica Federico Santa María (USM) students.
+https://github.com/ProgramacionCompetitivaUTFSM/Handbook-USM
 
 ## 🚀 Quick Start
 
@@ -14,9 +15,8 @@ typst compile main.typ
 
 This generates a PDF handbook with all algorithms organized by category.
 
-## 📖 Contents
-
-The handbook includes implementations for:
+## 📖 Contenidos
+Este apunte contempla los siguientes temas:
 
 - **🔧 General** - Templates and troubleshooting guides
 - **🔤 Strings** - String processing algorithms (KMP, Z-algorithm, Suffix Array, Trie, etc.)
@@ -56,23 +56,7 @@ content/
 └── strings/               # String algorithms
 ```
 
-## 🎯 Project Goals
-
-1. **Concise Implementations** - Provide short, efficient algorithm implementations
-2. **Educational Value** - Include clear descriptions and explanations
-3. **Competitive Ready** - Code optimized for programming contests
-4. **Comprehensive Coverage** - Cover all essential competitive programming topics
-
-## 🚧 Roadmap
-
-- [ ] Additional dynamic programming techniques
-- [ ] Voronoi diagrams and Delaunay triangulation
-- [ ] Extended geometry primitives (lines, circles, 3D operations)
-- [ ] 3D Convex Hull algorithms
-- [ ] Karatsuba polynomial multiplication
-- [ ] Advanced polynomial operations
-
-## 👥 Team
+## 👥 Team Handbook base
 
 **Maintainers:**
 - Gabriel Carmona (MrYhatoh)
@@ -90,4 +74,3 @@ This project is licensed under the terms specified in the [LICENSE](LICENSE) fil
 
 ---
 
-*Built with ❤️ for the competitive programming community at USM*

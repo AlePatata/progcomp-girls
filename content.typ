@@ -90,9 +90,8 @@
         fill: black,
         inset: 3pt
       )[
-        #text(fill: white, weight: "semibold")[
-          #title
-        ]
+        #show heading: set text(fill: white, weight: "semibold")
+        #heading(level: 2, title)
       ]
     ]
 
@@ -102,6 +101,7 @@
 }
 
 #let template-section-title(title) = {
+  show heading: set text(weight: "black", size: 15pt)
   heading(title)
   v(3pt)
 }
@@ -114,7 +114,8 @@
     spacing: 2em,
     width: 100%
   )[
-    #align(center)[#text(size: 10pt, weight: "bold")[#title]]
+    #show heading: set text(weight: "bold", size: 10pt)
+    #align(center, heading(level: 2, title))
     #eval(content, mode: "markup")
   ]
 }

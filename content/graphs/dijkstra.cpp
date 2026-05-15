@@ -1,19 +1,21 @@
 /*
- *Author:* Antti Laaksonen
- *Description:* Computes shortest path in $O(V log (V + E) )$, does not allow negative weights
+ *Description:* Computa las distancias mínimas desde un nodo inicial a todos los demás en un grafo ponderado con pesos no negativos usando el algoritmo de Dijkstra.
+  Complejidad: $O(V log (V + E) )$
 */
-for (int i = 1; i <= n; i++) distance[i] = INF;
-distance[x] = 0;
-q.push({0,x});
+
+vec<ll> dist(n, INF);
+dist[x] = 0;
+priority_queue<pli, vec<pli>, greater<pli>> q; 
+// esto o insertar pesos negativos
+q.push({0, x});
 while (!q.empty()) {
-  int a = q.top().second; q.pop();
-  if (processed[a]) continue;
-  processed[a] = true;
-  for (auto u : adj[a]) {
-    int b = u.first, w = u.second;
-    if (distance[a]+w < distance[b]) {
-      distance[b] = distance[a]+w;
-      q.push({-distance[b],b});
+  auto [w0, u] = q.top(); q.pop();
+  if (seen[u]) continue;
+  seen[u] = true;
+  for (auto [w, v] : graph[u]) {
+    if (dist[v] > dist[u] + w) {
+      dist[v] = dist[u] + w;
+      q.push({dist[v], v});
     }
   }
 }

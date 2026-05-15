@@ -1,16 +1,16 @@
 /*
- *Description:* Just the starting template code
+ *Description:* El inicio de tu código para el mejor contest que tendrás :D
 */
 #include<bits/stdc++.h>
+#ifdef alocal
+#include "debug.hpp"
+#else
+#define debug(...) 0;
+#endif
 
 using namespace std;
 
-using ll = long long;
-using ld = long double;
-
-const ll mod = 1e9 + 7;
-const ll inf = 1e12;
-const ld pi = acos(-1);
+const long double pi = acos(-1);
 
 int main() {
   ios::sync_with_stdio(0); cin.tie(0);

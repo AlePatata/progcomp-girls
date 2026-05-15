@@ -1,17 +1,17 @@
 /*
- *Description:* Just traverse a graph in bfs order
- *Status:* Tested
+ *Description:* Recorre un grafo no ponderado desde un nodo inicial, calculando la distancia mínima a cada nodo.
+  Complejidad: $O(V + E)$
 */
 visited[x] = true;
-distance[x] = 0;
+dist[x] = 0;
 q.push(x);
 while (!q.empty()) {
-int s = q.front(); q.pop();
+  int u = q.front(); q.pop();
   // process node s
-  for (auto u : adj[s]) {
-    if (visited[u]) continue;
-    visited[u] = true;
-    distance[u] = distance[s]+1;
-    q.push(u);
+  for (auto v : graph[u]) {
+    if (visited[v]) continue;
+    visited[v] = true;
+    dist[v] = dist[u]+1;
+    q.push(v);
   }
 }
