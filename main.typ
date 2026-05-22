@@ -16,6 +16,8 @@
   #image("img/ranita.png")
   #text(size: 2.5em)[Apunte popcorn]
 
+  #if "version" in sys.inputs [Versión #sys.inputs.version]
+
   #text(size: 8pt)[
     Basado en el Handbook de los estudiantes de la Universidad Técnica Federico Santa María,
     disponible en Github: ProgramacionCompetitivaUTFSM/Handbook-USM

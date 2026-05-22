@@ -1,15 +1,12 @@
-name: auto-pre-release
+name: release-new-version
 
-on:
-  push:
-    branches: [ "main" ]
+on: workflow_dispatch
 
 permissions:
   contents: write
 
 jobs:
   compile_and_release:
-
     runs-on: ubuntu-latest
 
     steps:
@@ -22,26 +19,25 @@ jobs:
         tar -xf typst-x86_64-unknown-linux-musl.tar.xz
         sudo mv typst-x86_64-unknown-linux-musl/typst /usr/local/bin/
 
-    - name: Get commit sha and date
-      id: sha_date
+    - name: Get date
+      id: get_date
       run: |
         echo "build_date=$(date +%Y.%m)" >> "$GITHUB_OUTPUT"
-        echo "sha_short=$(git rev-parse --short HEAD)" >> "$GITHUB_OUTPUT"
 
     - name: Compile Document
       run: |
         typst compile main.typ \
-          --input version="${{ steps.sha_date.outputs.build_date }}+${{ steps.sha_date.outputs.sha_short }}"
+          --input version="${{ steps.get_date.outputs.build_date }}"
         ls -al # List files to check if main.pdf exists
 
     - name: Create Release
       id: create_release
       uses: softprops/action-gh-release@v3
       with:
-        tag_name: 'v${{ steps.sha_date.outputs.build_date }}+${{ steps.sha_date.outputs.sha_short }}'
-        name: 'Prerelease on ${{ steps.sha_date.outputs.build_date }} for commit ${{ steps.sha_date.outputs.sha_short }}'
+        tag_name: 'v${{ steps.get_date.outputs.build_date }}'
+        name: 'Release v${{ steps.get_date.outputs.build_date }}'
         draft: false
-        prerelease: true
+        prerelease: false
         files: main.pdf
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
