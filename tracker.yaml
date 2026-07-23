@@ -8,7 +8,9 @@ content:
     - vim.typ
   - strings:
     - rolling-hashing.cpp
+    - prefix-function.cpp
     - kmp.cpp
+    - aho-corasick.cpp
     - manacher.cpp
     - min-rotation.cpp
   - data-structures:
@@ -20,6 +22,7 @@ content:
     - segment-tree.cpp
     - segment-tree-lazy.cpp
     - iterative-segment-tree-lazy.cpp
+    - persistent-segment-tree.cpp
     - dynamic-segment-tree.cpp
     - ordered-set.cpp
     - line-container.cpp
@@ -42,13 +45,13 @@ content:
     - ahld.cpp
     - lca.cpp
     - bellman-ford.cpp
-    
+
   - geometry:
     - point-2d.cpp
     - convex-hull.cpp
     - point-inside-polygon.cpp
     - polygon-area.cpp
-    
+
   - dynamic-programming:
     - lis.cpp
     - line-container.cpp
@@ -72,4 +75,4 @@ content:
     - removal-game.cpp
     - removing-digits.cpp
     - stones.cpp
-    
+
