@@ -64,7 +64,7 @@
 #let template-code(title: [], only-code: [], body) = {
   let code-lines = only-code.split("\n").len()
   let text-size = if code-lines > 90 { 5.3pt } else { 7pt }
-  
+
   block(
     breakable: false,
     radius: 5pt,
@@ -126,20 +126,20 @@
     for (folder-name, files) in content-list.at(i) {
       let title-section = title-case(folder-name.split("-").join(" "))
       template-section-title(title-section)
-      
+
       for file-name in files {
         let path = "content/" + folder-name + "/" + file-name
         let file-extension = path.split(".").at(-1)
         let template-title = title-case(file-name.split(".").at(0).split("-").join(" "))
         let file = read(path)
-        
+
         if file-extension == "typ" {
           typst-section(title: template-title, content: file)
         } else if file-extension == "cpp" {
           let all-code = raw(file, lang: "cpp")
           let comments = get-description-from-code(content-to-string(all-code))
           let without-comments = remove-description-from-code(content-to-string(all-code))
-          
+
           template-code(title: template-title, only-code: without-comments)[
             #eval(comments, mode: "markup")
             #line(length: 100%)
