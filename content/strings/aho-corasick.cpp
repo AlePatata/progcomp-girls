@@ -5,7 +5,7 @@
 struct AhoCorasick {
   struct Vertex {
     int next[26], go[26];
-    int p, link = -1, exit = -1, cnt = -1;
+    int p, link = -1;
     vector<int> leaf;
     char pch;
     Vertex(int p=-1, char ch='$') : p(p), pch(ch) {

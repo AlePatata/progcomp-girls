@@ -4,6 +4,7 @@ content:
     - troubleshoot.typ
     - execution-time.typ
     - getline.typ
+    - random.cpp
     - binary-searching.cpp
     - vim.typ
   - strings:
