@@ -8,12 +8,14 @@ content:
     - binary-searching.cpp
     - vim.typ
   - strings:
-    - rolling-hashing.cpp
-    - prefix-function.cpp
-    - kmp.cpp
-    - aho-corasick.cpp
-    - manacher.cpp
-    - min-rotation.cpp
+    - pattern-matching:
+      - rolling-hashing.cpp
+      - prefix-function.cpp
+      - kmp.cpp
+      - aho-corasick.cpp
+    - advanced:
+      - manacher.cpp
+      - min-rotation.cpp
   - data-structures:
     - min-queue.cpp
     - min-stack.cpp
@@ -28,12 +30,13 @@ content:
     - ordered-set.cpp
     - line-container.cpp
   - maths:
-    - equations.typ
-    - trigonometry.typ
-    - geometry.typ
-    - calculus.typ
-    - sums-series.typ
-    - probability.typ
+    - reference:
+      - equations.typ
+      - trigonometry.typ
+      - geometry.typ
+      - calculus.typ
+      - sums-series.typ
+      - probability.typ
     - divisores.cpp
     - criba.cpp
     - binpow.cpp
