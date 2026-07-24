@@ -6,6 +6,7 @@ content:
     - getline.typ
     - random.cpp
     - binary-searching.cpp
+    - lower-y-upper-bound.typ
     - vim.typ
   - strings:
     - pattern-matching:
@@ -37,6 +38,7 @@ content:
       - calculus.typ
       - sums-series.typ
       - probability.typ
+      - bit-operations.typ
     - divisores.cpp
     - criba.cpp
     - binpow.cpp
