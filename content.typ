@@ -115,8 +115,9 @@
       #set text(weight: "black", size: 12pt, fill: rgb("#444"))
       #sym.triangle.filled.r~#it.body
     ]
+    #v(-0.3em)
     #heading(level: 2, title)
-    #v(0.5em)
+    #v(0.2em)
   ]
 }
 
