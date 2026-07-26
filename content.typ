@@ -110,7 +110,7 @@
 }
 
 #let template-subcategory-title(title) = {
-  block(spacing: 1em)[
+  block(spacing: 1em, sticky: true)[
     #show heading: it => [
       #set text(weight: "black", size: 12pt, fill: rgb("#444"))
       #sym.triangle.filled.r~#it.body

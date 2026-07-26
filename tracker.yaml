@@ -11,6 +11,7 @@ content:
   - strings:
     - pattern-matching:
       - rolling-hashing.cpp
+      - k-rolling-hashing.cpp
       - prefix-function.cpp
       - kmp.cpp
       - aho-corasick.cpp
