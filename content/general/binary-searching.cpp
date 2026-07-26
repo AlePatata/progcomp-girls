@@ -1,10 +1,10 @@
 /*  
- *Decripcion:* 
- 1) Busca el primer valor entre l y r que hace la propiedad verdadera.
- 2) Busca el último valor entre l y r que hace la propiedad falsa.
- l: inicio del espacio de búsqueda (int o long long)
- r: fin del espacio de búsqueda (int o long long)
- mid: centro del espacio de búsqueda (int o long long)
+ *Decripción:*
+ 1) Busca el primer valor entre `l` y `r` que hace la propiedad verdadera.
+ 2) Busca el último valor entre `l` y `r` que hace la propiedad falsa.
+ `l`: inicio del espacio de búsqueda (`int` o `long long`)
+ `r`: fin del espacio de búsqueda (`int` o `long long`)
+ `mid`: centro del espacio de búsqueda (`int` o `long long`)
  Requiere que la condición sea "monótona": es falsa hasta cierto punto,
  después es siempre verdadera.
 */

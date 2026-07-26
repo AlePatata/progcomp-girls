@@ -1,5 +1,5 @@
 /*
- *Descripción:* Aho-Corasick, generalización de KMP a multiples patrones, con memoización
+ *Descripción:* Aho-Corasick, generalización de KMP a múltiples patrones, con memoización
  *Complejidad:* Construccion: $O(N)$ con $N$ el largo total de los patrones
 */
 struct AhoCorasick {

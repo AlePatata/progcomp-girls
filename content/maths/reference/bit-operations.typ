@@ -4,11 +4,11 @@ Por ej. `0b1101` es 13 en binario. En los ejemplos siguientes se usan números d
 
 - `~`: operador lógico NOT ("no"), pasa 0s a 1s y viceversa
   - Ej. `~0b1101 == 0b0010`, `~0b0101 == 0b1010`
-- `&`: operador lógico AND ("y")
+- `&`: operador lógico AND ("y"), conmutativo, asociativo, distrubutivo c/r a OR, XOR
   - Ej. `0b1001 & 0b0111 == 0b0001`, `0b0101 & 0b1100 == 0b0100`
-- `|`: operador lógico OR ("o")
+- `|`: operador lógico OR ("o"), conmutativo, asociativo, distrubutivo c/r a AND
   - Ej. `0b1001 | 0b0111 == 0b1111`, `0b0101 | 0b1100 == 0b1101`
-- `^`: operador lógico XOR (exclusive or; "o" exclusivo)
+- `^`: operador lógico XOR (exclusive or; "o" exclusivo), conmutativo, asociativo
   - Ej. `0b1001 ^ 0b0111 == 0b1110`, `0b0101 ^ 0b1100 == 0b1001`
 - `>>`, `<<`: bitshifts (desplazamiento de bits) derecho e izquierdo
   - Ej. `0b`#text(blue, [`1`])`01`#text(red, [`1`])` >> 1 == 0b0`#text(blue, [`1`])`01`,

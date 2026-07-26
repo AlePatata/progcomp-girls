@@ -1,6 +1,6 @@
 /*
- *Description:* Recorre un grafo no ponderado desde un nodo inicial, calculando la distancia mínima a cada nodo.
-  Complejidad: $O(V + E)$
+ *Descripción:* Recorre un grafo no ponderado desde un nodo inicial, calculando la distancia mínima a cada nodo.
+ *Complejidad:* $O(V + E)$
 */
 visited[x] = true;
 dist[x] = 0;

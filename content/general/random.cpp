@@ -1,5 +1,5 @@
 /*
-  *Description:* RNG con C++, preferir sobre RNG de C, predecible e inseguro
+  *Descripción:* RNG con C++, preferir sobre RNG de C, predecible e inseguro
 */
 mt19937_64 rng(chrono::steady_clock::now().time_since_epoch().count());
 

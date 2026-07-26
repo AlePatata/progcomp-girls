@@ -1,5 +1,5 @@
 /*
- *Descripcion:* Obtiene la descomposicion prima de un numero n.
+ *Descripción:* Obtiene la descomposición prima de un número $n$.
 */
 vector<pi> desc; // {primo, potencia}
 ll m = n;

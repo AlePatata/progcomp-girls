@@ -1,6 +1,6 @@
 /*
- *Description:* Calcula $a^b$ mod $m$
-  Complejidad: $O(log b)$
+ *Descripción:* Calcula $a^b mod m$
+ *Complejidad:* $O(log b)$
  */
 template<class T>
 T binpow(T a, int b, T m) {

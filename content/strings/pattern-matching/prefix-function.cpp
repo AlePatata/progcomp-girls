@@ -1,5 +1,5 @@
 /*
- *Descripción:* Funcion prefijo para KMP
+ *Descripción:* Función prefijo para KMP
  *Complejidad:* $O(n)$
 */
 vector<int> prefix_function(const string &s) {

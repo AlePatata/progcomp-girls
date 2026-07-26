@@ -1,5 +1,5 @@
 /*
- *Description:* El inicio de tu código para el mejor contest que tendrás :D
+ *Descripción:* El inicio de tu código para el mejor contest que tendrás :D
 */
 #include<bits/stdc++.h>
 #ifdef alocal

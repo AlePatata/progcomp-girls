@@ -1,5 +1,5 @@
 /*
- *Description:* Ordena un DAG (grafo dirigido acíclico) para ser recorrido desde sus extremos.
+ *Descripción:* Ordena un DAG (grafo dirigido acíclico) para ser recorrido desde sus extremos.
 */
 
 void topological_sort() {

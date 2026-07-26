@@ -1,11 +1,10 @@
 /*
- *Description:* Obtiene los divisores de un número $n$
-  Complejidad: $O(√n)$
+ *Descripción:* Obtiene los divisores de un número $n$
+ *Complejidad:* $O(sqrt(n))$
 */
 template<class T>
 vector<T> divisores(T n) {
 	vector<T> v1, v2;
-
 	for (T i = 1; i*i <= n; ++i) {
         if (n%i == 0) {
             v1.push_back(i);

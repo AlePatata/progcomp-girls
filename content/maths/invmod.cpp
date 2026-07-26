@@ -1,7 +1,6 @@
 /*
- *Description:* Calcula el inverso modular de $a$ mod $m$ (m primo)
-  Complejidad: $O(log m)$
-  Requiere: binpow
+ *Descripción:* Calcula el inverso modular de $a mod m$ (con $m$ primo)
+ *Complejidad:* $O(log m)$ *Requiere:* `binpow`
 */
 
 template<class T>
