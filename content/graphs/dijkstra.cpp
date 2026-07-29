@@ -1,6 +1,6 @@
 /*
  *Descripción:* Computa las distancias mínimas desde un nodo inicial a todos los demás en un grafo ponderado, con pesos no negativos, usando el algoritmo de Dijkstra.
- *Complejidad:* $O(V log (V + E) )$
+ *Complejidad:* $O(V log V + E)$
 */
 
 vec<ll> dist(n, INF);
