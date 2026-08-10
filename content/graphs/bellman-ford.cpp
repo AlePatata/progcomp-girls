@@ -1,5 +1,5 @@
 /*
- *Description:* Calculates shortest paths from $s$ in a graph that might have negative edge weights.
+ *Description:* Calculates shortest paths from $s$ in a graph that might have negative edge weights. $O(V E)$
  *Status:* Tested on CSES
 */
 struct BellmanFord {

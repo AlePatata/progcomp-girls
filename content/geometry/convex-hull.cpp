@@ -1,5 +1,5 @@
 /*
- *Description:* Get the convex hull of the cloud of points, allow collinear points if is needed
+ *Description:* Get the convex hull of the cloud of points, allow collinear points if is needed. $O(n log n)$
  *Status:* Highly tested
 */
 template<typename T>
