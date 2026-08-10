@@ -6,6 +6,7 @@ content:
     - getline.typ
     - random.cpp
     - binary-searching.cpp
+    - ternary-search.cpp
     - lower-y-upper-bound.typ
     - vim.typ
   - strings:
