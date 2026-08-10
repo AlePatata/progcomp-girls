@@ -55,10 +55,10 @@
 *Tips:*
 - pi=3.14159265...
 - sortear double es caro!!!
-- hacer funciones para evitar bugs estúpidos 
-- ponerle {} a todo 
-- casos -> funciones 
-- usar INVERSO MODULAR cuando haya que dividir cosas con módulo 
-- invmod() del blaz es solo para MOD primos  
+- hacer funciones para evitar bugs estúpidos
+- ponerle {} a todo
+- casos -> funciones
+- usar INVERSO MODULAR cuando haya que dividir cosas con módulo
+- invmod() del blaz es solo para MOD primos
 - ver el scoreboard desde el minuto 10!!
-- vectores grandes con tamaño fijo -> usar arreglos globales para evitar tle (ej: ll dp[8001][1001][5];)
+- vectores grandes con tamaño fijo -> usar arreglos globales para evitar tle (ej: `ll dp[8001][1001][5];`)

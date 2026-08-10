@@ -39,7 +39,7 @@ struct LCA {
         u = parent[u][j];
         v = parent[v][j];
       }
-    }        
+    }
     return parent[u][0];
   }
 };

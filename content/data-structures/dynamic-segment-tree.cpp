@@ -11,7 +11,7 @@ template <
 struct dynamic_segment_tree {
   vector<T> ST; vector<int>L, R;
   MAXi n; int n_count;
-  dynamic_segment_tree (MAXi n, int r) : 
+  dynamic_segment_tree (MAXi n, int r) :
     n(n),n_count(1),L(1),R(1),ST(1){
     ST.reserve(r);
     L.reserve(r);
@@ -28,7 +28,7 @@ struct dynamic_segment_tree {
     if (a <= l and r <= b)
       return ST[i];
     MAXi mid = ((l + r) >> 1LL);
-    if (b <= mid) 
+    if (b <= mid)
       return (L[i] != 0 ? query(L[i], l, mid, a, b) : init(l, mid));
     else if (a > mid)
       return (R[i] != 0 ? query(R[i], mid + 1, r, a, b) : init(mid + 1, r));
@@ -46,10 +46,10 @@ struct dynamic_segment_tree {
     MAXi mid = (l + r) / 2LL;
     if (p <= mid)
       update(L[i] != 0 ? L[i] : L[i] = addNode(l, mid), l, mid, p, v);
-    else 
+    else
       update(R[i] != 0 ? R[i] : R[i] = addNode(mid + 1, r), mid + 1, r, p, v);
     ST[i] = merge(
-        L[i] != 0 ? ST[L[i]] : init(l, mid), 
+        L[i] != 0 ? ST[L[i]] : init(l, mid),
         R[i] != 0 ? ST[R[i]] : init(mid + 1, r)
       );
   }

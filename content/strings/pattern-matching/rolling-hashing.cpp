@@ -4,7 +4,7 @@
 */
 template<class T>
 struct rolling_hashing {
-  int base, mod; 
+  int base, mod;
   vector<long long> p, H;
   int n;
   rolling_hashing(const T &s, int b, int m): base(b), mod(m), n(s.size()) {

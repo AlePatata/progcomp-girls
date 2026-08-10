@@ -1,4 +1,4 @@
-/*  
+/*
  *Decripción:*
  1) Busca el primer valor entre `l` y `r` que hace la propiedad verdadera.
  2) Busca el último valor entre `l` y `r` que hace la propiedad falsa.

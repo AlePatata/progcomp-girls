@@ -51,7 +51,13 @@
   }
 
   let lines = comments.split("\n")
-  lines.slice(1, lines.len() - 1).join("\\").trim()
+  lines.slice(1, lines.len() - 1)
+    .map(it => if it.ends-with("\\") {
+      it.trim("\\", at: end)
+    } else {
+      it + "\\"
+    })
+    .join().trim()
 }
 
 #let remove-description-from-code(string) = {

@@ -23,7 +23,7 @@ struct manacher {
     }
   }
   // Returns the longest palindrome centered at i
-  pair<int, int> get(int i) { 
+  pair<int, int> get(int i) {
     int o = 2 * odd[i] - 1;   // Normally centered (Is odd size)
     int e = 2 * even[i];      // Centered to the right
     if (o >= e)

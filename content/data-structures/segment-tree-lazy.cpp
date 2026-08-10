@@ -5,7 +5,7 @@
 template<
   class T1, // answer value stored on nodes
   class T2, // lazy update value stored on nodes
-  T1 merge(T1, T1), 
+  T1 merge(T1, T1),
   void pushUpd(T2& /*parent*/, T2& /*child*/, int, int, int, int), // push update value from a node to another. parent -> child
   void applyUpd(T2&, T1&, int, int)           // apply the update value of a node to its answer value. upd -> ans
 >
@@ -67,7 +67,7 @@ struct segment_tree_lazy{
     int mid = (l + r) >> 1;
     if (mid < a)
       return query(i << 1 | 1, mid + 1, r, a, b);
-    if (mid >= b) 
+    if (mid >= b)
       return query(i << 1, l, mid, a, b);
     return merge(query(i << 1, l, mid, a, b), query(i << 1 | 1, mid + 1, r, a, b));
   }

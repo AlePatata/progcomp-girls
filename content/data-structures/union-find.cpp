@@ -5,7 +5,7 @@
 struct union_find {
   vector<int> e;
   union_find(int n) { e.assign(n, -1); }
-  int findSet (int x) { 
+  int findSet (int x) {
     return (e[x] < 0 ? x : e[x] = findSet(e[x]));
   }
   bool sameSet (int x, int y) { return findSet(x) == findSet(y); }

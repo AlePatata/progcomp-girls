@@ -1,6 +1,5 @@
-
 /*
- *Descripcion:* Dado un numero n, si cada operación le restas uno de sus digitos cuál es la minima cantidad de operaciones para reducirlo a 0.
+ *Descripción:* Dado un número $n$, si cada operación le restas uno de sus dígitos, cuál es la minima cantidad de operaciones para reducirlo a 0.
 */
 vector<int> dp(n+1, INF);
 dp[0] = 0;

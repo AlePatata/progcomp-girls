@@ -54,8 +54,8 @@ struct segment_tree_lazy {
         push(l,l+1); push(r,r+1);
         T1 ansL, ansR; bool hasL = 0,hasR = 0;
         for (l += n, r += n+1; l < r; l >>= 1, r >>= 1){
-            if (l&1) ansL = (hasL?merge(ansL,st[l++]):st[l++]), hasL = 1; 
-            if (r&1) ansR = (hasR?merge(st[--r],ansR):st[--r]), hasR = 1; 
+            if (l&1) ansL = (hasL?merge(ansL,st[l++]):st[l++]), hasL = 1;
+            if (r&1) ansR = (hasR?merge(st[--r],ansR):st[--r]), hasR = 1;
         }
         if (!hasL) return ansR; if (!hasR) return ansL;
         return merge(ansL,ansR);
