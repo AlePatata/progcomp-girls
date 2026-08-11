@@ -1,5 +1,6 @@
 /*
- *Descripción:* Cantidad de formas de comer entre $l$ y $r$ flores dado que solo come flores en grupos de $k$
+ *Descripción:* Cantidad de formas de comer entre $l$ y $r$ flores\\
+ dado que solo come flores W (de tipo W) en grupos de $k$
 */
 vector<ll> dp(INF);
 dp[0] = 1;

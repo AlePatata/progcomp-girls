@@ -1,5 +1,5 @@
 /*
- *Descripcion:* Dado un conjunto de n números, dos jugadores juegan alternadamente para eliminar un número\
+ *Descripción:* Dado un conjunto de n números, dos jugadores juegan alternadamente para eliminar un número\
  del inicio o del final del conjunto. Cada jugador intenta maximizar la suma de los números que elimina.\
  Encuentra la suma máxima que el primer jugador puede obtener si ambos juegan de manera óptima.
 */
