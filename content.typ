@@ -77,54 +77,42 @@
     inset: 1em,
     stroke: 0.9pt,
     spacing: 1.5em,
-    width: 100%
-  )[
-    #place(dy: -15pt, dx: 220pt)[
-      #block(
-        fill: black,
-        inset: 3pt,
-      )[
-        #text(fill: green)[\#]
-        #text(fill: white, weight: "semibold")[
-          #get-code-hash(only-code)
-        ]
-      ]
-    ]
+    width: 100%,
+  {
+    place(dy: -15pt, dx: 220pt, block(fill: black, inset: 3pt, {
+      text(fill: green)[\#]
+      text(fill: white, weight: "semibold", get-code-hash(only-code))
+    }))
 
-    #place(dy: -15pt)[
-      #block(
-        fill: black,
-        inset: 3pt
-      )[
-        #show heading: set text(fill: white, weight: "semibold")
-        #heading(level: level, title)
-      ]
-    ]
+    place(dy: -15pt, block(fill: black, inset: 3pt, {
+      show heading: set text(fill: white, weight: "semibold")
+      heading(level: level, title)
+    }))
 
-    #set text(size: text-size)
-    #body
-  ]
+    set text(size: text-size)
+    body
+  })
 }
 
 #let template-category-title(title) = {
-  block(spacing: 1.5em)[
-    #show heading: set text(weight: "black", size: 18pt)
-    #heading(title)
-    #v(-0.5em)
-    #line(length: 100%, stroke: 1.5pt)
-  ]
+  block(spacing: 1.5em, {
+    show heading: set text(weight: "black", size: 18pt)
+    heading(title)
+    v(-0.5em)
+    line(length: 100%, stroke: 1.5pt)
+  })
 }
 
 #let template-subcategory-title(title) = {
-  block(spacing: 1em, sticky: true)[
-    #show heading: it => [
+  block(spacing: 1em, sticky: true, {
+    show heading: it => [
       #set text(weight: "black", size: 12pt, fill: rgb("#444"))
       #sym.triangle.filled.r~#it.body
     ]
-    #v(-0.3em)
-    #heading(level: 2, title)
-    #v(0.2em)
-  ]
+    v(-0.3em)
+    heading(depth: 2, title)
+    v(0.2em)
+  })
 }
 
 #let template-section-title(title) = {
@@ -139,12 +127,16 @@
     inset: 1em,
     stroke: 0.9pt,
     spacing: 2em,
-    width: 100%
-  )[
-    #show heading: set text(weight: "bold", size: 10pt)
-    #align(center, heading(level: level, title))
-    #eval(content, mode: "markup")
-  ]
+    width: 100%,
+  {
+    {
+      show heading: set text(weight: "bold", size: 10pt)
+      align(center, heading(level: level, title))
+    }
+
+    set heading(offset: level)
+    eval(content, mode: "markup")
+  })
 }
 
 #let render-file(path, file-name, level: 2) = {
@@ -159,11 +151,11 @@
     let comments = get-description-from-code(content-to-string(all-code))
     let without-comments = remove-description-from-code(content-to-string(all-code))
 
-    template-code(title: template-title, only-code: without-comments, level: level)[
-      #eval(comments, mode: "markup")
-      #line(length: 100%)
-      #raw(without-comments, lang: "cpp")
-    ]
+    template-code(title: template-title, only-code: without-comments, level: level, {
+      eval(comments, mode: "markup")
+      line(length: 100%)
+      raw(without-comments, lang: "cpp")
+    })
   }
 }
 
