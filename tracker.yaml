@@ -47,6 +47,7 @@ content:
     - invmod.cpp
     - rotate-matrix.cpp
     - factorizacion-prima.cpp
+    - binomial.cpp
 
   - graphs:
     - bfs.cpp
