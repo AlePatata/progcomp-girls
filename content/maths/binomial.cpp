@@ -1,7 +1,6 @@
 /*
  *Descripción:* Calcula el binomial de n sobre k
- *Requiere:* factorial y inverso factorial
- *Complejidad:* $O(1)$
+ *Complejidad:* $O(1)$ *Requiere:* factorial y inverso factorial
  */
 template<class T>
 T binomial(T n, T k, T mod){
