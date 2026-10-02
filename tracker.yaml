@@ -49,6 +49,7 @@ content:
     - factorizacion-prima.cpp
     - binomial.cpp
     - factorial.cpp
+    - invfact.cpp
 
   - graphs:
     - bfs.cpp
