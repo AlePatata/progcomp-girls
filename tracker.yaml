@@ -57,7 +57,8 @@ content:
     - topo-sort.cpp
     - floyd-warshall.cpp
     - dijkstra.cpp
-    - kruskal.cpp
+    - kruskal_tree.cpp
+    - kruskal_value.cpp
     - hld.cpp
     - ahld.cpp
     - lca.cpp

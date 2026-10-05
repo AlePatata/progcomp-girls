@@ -1,5 +1,6 @@
 /*
- *Description:* Minimum spanning tree in $O(E log E)$
+ *Description:* Valor del MST in $O(E log E)$
+ *NEED:* UNION_FIND
  *Status:* Tested
 */
 struct Edge {
