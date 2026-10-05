@@ -1,6 +1,6 @@
 /*
- *Descripción:* Calcula el invfactorial hasta maxv
- *Complejidad:* $O(maxv)$ *Requiere:* `fact y invmod`
+ *Descripción:* Calcula el invfactorial hasta `maxv`.
+ *Complejidad:* $O("maxv")$ *Requiere:* `fact y invmod`
  */
 ll invfact[maxv];
 invfact[maxv-1] = invmod(fact[i-1],mod);

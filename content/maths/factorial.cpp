@@ -1,6 +1,6 @@
 /*
- *Descripción:* Calcula el factorial hasta maxv
- *Complejidad:* $O(maxv)$
+ *Descripción:* Calcula el factorial hasta `maxv`.
+ *Complejidad:* $O("maxv")$
  */
 
 ll fact[maxv];
