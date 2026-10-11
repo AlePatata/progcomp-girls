@@ -58,6 +58,8 @@ struct segment_tree_lazy{
   }
   void update(int a, int b, T2 u){
     if (a > b){
+     // si no es circular, significa que este es un rango inválido
+     // por lo tanto coméntalo y deja solo el return !! 
       update(0, b, u);
       update(a, n - 1, u);
       return ;
