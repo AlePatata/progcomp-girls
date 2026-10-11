@@ -45,3 +45,4 @@ while (!stream.eof()) {
 }
 ```
 
+Si estás teniendo problemas con leer líneas puede deberse a un salto de línea anterior, para ello se puede usar cin.ignore() antes del getline, en caso de que antes si supieras la cantidad de elementos a leer.
