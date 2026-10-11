@@ -1,6 +1,10 @@
 /*
  *Description:* Segment tree but with range updates, build $O(n)$, query and update $O(log n)$
- *Status:* Highly tested
+ *notes*: Funciona en casos de circulos (l>r)
+ requiere 3 funciones:
+- merge: forma del st :3
+- pushUpd: lo que se guarda como en el 'rango'
+- applyUpd: aplicación del update a cada nodo
 */
 template<
   class T1, // answer value stored on nodes
