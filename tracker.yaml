@@ -54,6 +54,7 @@ content:
   - graphs:
     - bfs.cpp
     - dfs.cpp
+    - dfs-iterative.cpp
     - topo-sort.cpp
     - floyd-warshall.cpp
     - dijkstra.cpp
@@ -73,6 +74,7 @@ content:
   - dynamic-programming:
     - lis.cpp
     - line-container.cpp
+    - prefix-sum-2d.cpp
     - 2^sort.cpp
     - cut-ribbon.cpp
     - frog-1.cpp
