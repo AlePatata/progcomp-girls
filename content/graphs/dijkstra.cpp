@@ -3,7 +3,7 @@
  - `gr[u]` contiene pares `{v, w}`: arista `u -> v` con peso `w`
  *Complejidad:* $O(V log V + E)$
 */
-vector<ll> dist(n, LINF);
+vector<ll> dist(n, LLONG_MAX);
 dist[s] = 0;
 // esto o insertar pesos negativos
 priority_queue<pair<ll, int>, vector<pair<ll, int>>, greater<pair<ll, int>>> q;

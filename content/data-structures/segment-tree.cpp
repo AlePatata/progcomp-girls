@@ -1,6 +1,5 @@
 /*
- *Description:* Range queries, build $O(n)$, query and update $O(log n)$, positions [0, n - 1]
- *Status:* Highly tested
+ *Descripción:* Consultas en rangos. Construcción $O(n)$, consulta y update $O(log n)$, posiciones [0, n - 1]
 */
 template<class T, T m_(T, T)> struct segment_tree{
   int n; vector<T> ST;
@@ -10,7 +9,7 @@ template<class T, T m_(T, T)> struct segment_tree{
     for (int i=n;i<(n<<1);i++)ST[i]=a[i-n];
     for (int i=n-1;i>0;i--)ST[i]=m_(ST[i<<1],ST[i<<1|1]);
   }
-  void update(int pos, T val){ // replace with val
+  void update(int pos, T val){ // reemplaza por val
     ST[pos += n] = val;
     for (pos >>= 1; pos > 0; pos >>= 1)
       ST[pos] = m_(ST[pos<<1], ST[pos<<1|1]);

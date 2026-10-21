@@ -1,8 +1,7 @@
 /*
- *Description:* Valor del MST in $O(E log E)$
+ *Descripción:* Valor del MST en $O(E log E)$
  - `gr[u]` contiene pares `{v, w}`: arista `u - v` con peso `w`
- *NEED:* UNION_FIND
- *Status:* Tested
+ *Requiere:* `union_find`
 */
 ll kruskal_value(vector<vector<pii>> &gr) {
   int n = sz(gr);

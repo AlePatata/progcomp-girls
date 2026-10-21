@@ -1,5 +1,5 @@
 /*
- *Descripción*: Busca el mínimo en una función continua unimodal entre $l$ y $r$
+ *Descripción:* Busca el mínimo en una función continua unimodal entre $l$ y $r$
 */
 const double EPS = 1e-6; // ajustar para más o menos precisión
 while (r - l > EPS) {

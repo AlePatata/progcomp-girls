@@ -2,7 +2,6 @@
  *Descripción:* Suma de cualquier submatriz (área) en $O(1)$ tras precálculo $O(n m)$.
  - `p[i][j]` = suma del rectángulo desde `(0, 0)` hasta `(i-1, j-1)`, 1-indexado con fila/columna 0 en cero
  - `query(r1, c1, r2, c2)` suma de filas `[r1, r2]` y columnas `[c1, c2]`, inclusivo y 0-indexado
- *Status:* Tested
 */
 template <class T> struct prefix_sum_2d {
   vector<vector<T>> p;

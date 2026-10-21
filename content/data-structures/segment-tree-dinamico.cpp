@@ -1,12 +1,11 @@
 /*
- *Description:* The nodes are created when the some value is updated, enabling queries in intervals like $[0, 10^12]$. Overall complexity is $O(Q log N)$
- *Status:* Not tested
+ *Descripción:* Los nodos se crean cuando se actualiza algún valor, permitiendo consultas en intervalos como $[0, 10^12]$. Complejidad total $O(Q log N)$
 */
 template <
-    class T,           // Data type of the nodes
-    class MAXi,        // Data type of the ranges (ll or i128)
-    T merge(T, T),     // Merge
-    T init(MAXi, MAXi) // Default value for [a, b]
+    class T,           // Tipo de dato de los nodos
+    class MAXi,        // Tipo de dato de los rangos (ll o i128)
+    T merge(T, T),     // Combinar
+    T init(MAXi, MAXi) // Valor por defecto para [a, b]
 >
 struct dynamic_segment_tree {
   vector<T> ST; vector<int>L, R;

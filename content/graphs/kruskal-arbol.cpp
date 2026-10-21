@@ -1,7 +1,7 @@
 /*
- *Description*: Retorna la construcción de un MST
+ *Descripción:* Retorna la construcción de un MST
  - `gr[u]` contiene pares `{v, w}`: arista `u - v` con peso `w`
- *NEED*: UNION_FIND
+ *Requiere:* `union_find`
 */
 vector<vector<pii>> kruskal(vector<vector<pii>> &gr) {
   int n = sz(gr);

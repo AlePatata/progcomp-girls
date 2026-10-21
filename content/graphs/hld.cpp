@@ -1,7 +1,6 @@
 /*
-  *Author:* Javier Oliva
-  *Description:* Answer queries in $O( log(V) dot A dot B )$, where $A$ is the complexity of merging two chains and $B$ is the complexity of the data structure query.
-  *Status:* Partially tested
+  *Autor:* Javier Oliva
+  *Descripción:* Responde consultas en $O( log(V) dot A dot B )$, donde $A$ es la complejidad de combinar dos cadenas y $B$ la complejidad de la consulta de la estructura de datos.
 */
 template <class DS, class T, T merge(T, T), int IN_EDGES>
 struct heavy_light {

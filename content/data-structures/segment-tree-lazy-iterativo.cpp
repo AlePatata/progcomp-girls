@@ -1,6 +1,5 @@
 /*
- *Description:* Segment tree with lazy propagation, but now iterative. Build is $O(n)$, querys and updates are $O(log n)$
- *Status:* Tested
+ *Descripción:* Segment tree con propagación lazy, pero iterativo. Construcción $O(n)$, consultas y updates $O(log n)$
 */
 template<class T1,class T2,T1 merge(T1&,T1&),void applyUpd(T1&,T2&,int), void pushUpd(T2&,T2&,int)>
 struct segment_tree_lazy {
@@ -61,7 +60,7 @@ struct segment_tree_lazy {
     return merge(ansL,ansR);
   }
 };
-/* example of use */
+/* ejemplo de uso */
 struct lz {
   ll val;
   lz(){ val = 0; }

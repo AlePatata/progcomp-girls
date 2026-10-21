@@ -1,6 +1,5 @@
 /*
- *Description:* Rolling hash with multiple hash functions for collision resistance
- *Status:* Tested
+ *Descripción:* Rolling hash con varias funciones de hash para reducir colisiones
 */
 template<class T>
 struct rolling_hashing {

@@ -1,6 +1,5 @@
 /*
- *Description:* Get the minumum element of the deque, runs on $O(1)$ per operation amortized. Can be modified to get the maximum just changing the function
- *Status:* Not tested
+ *Descripción:* Obtiene el mínimo de la deque en $O(1)$ amortizado por operación. Se puede modificar para obtener el máximo cambiando la función
 */
 template<typename T>
 struct min_deque {

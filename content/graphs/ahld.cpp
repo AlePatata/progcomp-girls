@@ -1,7 +1,6 @@
 /*
-  *Author:* Javier Oliva
-  *Description:* Same complexity of HLD, but with worst constant. This implementation only uses asociativity
-  *Status:* Partially tested
+  *Autor:* Javier Oliva
+  *Descripción:* Misma complejidad que HLD, pero con peor constante. Esta implementación solo usa asociatividad (no conmutatividad)
 */
 template <class DS, class T, T merge(T, T), int IN_EDGES>
 struct associative_heavy_light {

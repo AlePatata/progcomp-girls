@@ -1,6 +1,5 @@
 /*
-  *Description:* Find occurrences of a pattern within given text, runs in $O(n + m)$, where $n$ and $m$ are the lengths of the text and pattern respectively.
-  *Status:* Tested on CSES
+  *Descripción:* Encuentra las ocurrencias de un patrón en un texto, en $O(n + m)$, donde $n$ y $m$ son los largos del texto y del patrón respectivamente.
 */
 template<class T> struct KMP {
   T pattern; vector<int> lps;

@@ -1,7 +1,6 @@
 /*
- *Description:* Get the area of a polygon
- - If you want the double of the area, just enable the flag
- *Status:* Highly tested
+ *Descripción:* Obtiene el área de un polígono
+ - Si se quiere el doble del área, activar el flag `x2`
 */
 template<typename T>
 T polygonArea(vector<Point2D<T>> P, bool x2 = 0) {

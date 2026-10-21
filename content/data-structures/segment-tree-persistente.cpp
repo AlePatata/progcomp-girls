@@ -1,6 +1,5 @@
 /*
- *Description:* Segment tree but saves a new version of the tree for each update, build $O(n)$, query $O(log n)$, new nodes for each update $O(log n)$
- *Status:* Tested on CSES
+ *Descripción:* Segment tree que guarda una nueva versión del árbol en cada update. Construcción $O(n)$, consulta $O(log n)$, nodos nuevos por update $O(log n)$
 */
 template<class T, T _m(T, T)>
 struct persistent_segment_tree {

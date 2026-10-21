@@ -1,16 +1,15 @@
 /*
- *Description:* Computes lowest common ancestor, precomputed in $O(V log V)$, $O(log V)$ per query, uses binary lifting and works for directed and undirected graphs.
- *Status:* Tested
+ *Descripción:* Calcula el ancestro común más bajo (LCA), precálculo $O(V log V)$, $O(log V)$ por consulta, usa binary lifting y funciona para grafos dirigidos y no dirigidos.
 */
 struct LCA {
   int LOGN;
   vector<vector<int>> gr, parent;
   vector<int> depth, vis;
-  // If WA, bigger logn?
+  // Si da WA, ¿logn más grande?
   LCA(vector<vector<int>> &gr, int logn = 20): LOGN(logn), gr(gr), vis(sz(gr)) {
     parent.assign(sz(gr)+1, vector<int>(LOGN, 0));
     depth.assign(sz(gr)+1, 0);
-    // If is forest
+    // Si es un bosque
     //for (int u = 0; u < sz(gr); u++)
     //  if (!vis[u]) dfs(u);
   }

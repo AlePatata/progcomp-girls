@@ -1,6 +1,5 @@
 /*
-  *Description:* Find palindromes centered at $i$ in $O(n)$
-  *Status:* Tested on CSES
+  *Descripción:* Encuentra los palíndromos centrados en $i$ en $O(n)$
 */
 template<class T>
 struct manacher {
@@ -22,10 +21,10 @@ struct manacher {
       if (i + k > r) l = i - k - 1, r = i + k;
     }
   }
-  // Returns the longest palindrome centered at i
+  // Retorna el palíndromo más largo centrado en i
   pii get(int i) {
-    int o = 2 * odd[i] - 1;   // Normally centered (Is odd size)
-    int e = 2 * even[i];      // Centered to the right
+    int o = 2 * odd[i] - 1;   // Centrado normal (largo impar)
+    int e = 2 * even[i];      // Centrado a la derecha (largo par)
     if (o >= e)
       return {i - odd[i] + 1, i + odd[i] - 1};
     return {i - even[i], i + even[i] - 1};

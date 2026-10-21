@@ -1,6 +1,5 @@
 /*
- *Description:* Just a 2D Point
- *Status:* Tested
+ *Descripción:* Un punto en 2D
  */
 template <typename T> struct Point2D {
   T x, y;

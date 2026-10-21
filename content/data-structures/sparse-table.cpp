@@ -1,8 +1,7 @@
 /*
- *Description:* Range queries, precomputed $O(n log n)$, query $O(1)$.
- - Only supports queries of idempotent functions (min, max, gcd)
- - Does not allow updates
- *Status:* Highly tested
+ *Descripción:* Consultas en rangos, precálculo $O(n log n)$, consulta $O(1)$.
+ - Solo sirve para funciones idempotentes (min, max, gcd)
+ - No permite updates
 */
 template <typename T, T m_(T, T)>
 struct sparse_table {

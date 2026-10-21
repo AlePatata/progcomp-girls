@@ -1,9 +1,8 @@
 /*
- *Description:* Check if a point is inside, bounds or out of the polygon
- - 0: Bounds
- - 1: Inside
- - 2: Out
- *Status:* Tested
+ *Descripción:* Revisa si un punto está dentro, en el borde o fuera del polígono
+ - 0: Borde
+ - 1: Dentro
+ - -1: Fuera
 */
 template<typename T>
 int pointInsidePolygon(vector<Point2D<T>> &P, Point2D<T> q) {

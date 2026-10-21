@@ -1,6 +1,5 @@
 /*
- *Description:* Rolling hash for fast substring comparison, single hash function
- *Status:* Tested
+ *Descripción:* Rolling hash para comparar substrings rápido, con una sola función de hash
 */
 template<class T>
 struct rolling_hashing {

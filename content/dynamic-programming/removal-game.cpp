@@ -11,7 +11,7 @@ for (int l = 1; l <= n; ++l)
     int j = i + l - 1;
     if (i == j) continue;
     if (j >= n) break;
-    ll m = -LINF;
+    ll m = LLONG_MIN;
     if (i+1 < n) m = max(m, a[i] + p[j+1] - p[i+1] - dp[i+1][j]);
     if (0 <= j-1) m = max(m, a[j] + p[j] - p[i] - dp[i][j-1]);
     dp[i][j] = m;

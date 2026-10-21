@@ -1,6 +1,5 @@
 /*
- *Description:* Finds the lexicographically smallest rotation of a string, runs on $O(n)$
- *Status:* Tested on CSES
+ *Descripción:* Encuentra la rotación lexicográficamente menor de un string, en $O(n)$
 */
 string minRotation(string &s) {
   int a = 0, n = sz(s);

@@ -1,6 +1,5 @@
 /*
- *Description:* Get the convex hull of the cloud of points, allow collinear points if is needed. $O(n log n)$
- *Status:* Highly tested
+ *Descripción:* Obtiene la envoltura convexa de una nube de puntos, permite puntos colineales si se necesita (`ac = 1`). $O(n log n)$
 */
 template<typename T>
 vector<Point2D<T>> convexHull(vector<Point2D<T>> cloud, bool ac = 0) {
