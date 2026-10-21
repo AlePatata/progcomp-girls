@@ -53,9 +53,6 @@ content:
 
   - graphs:
     - bfs.cpp
-    - dfs.cpp
-    - dfs-iterative.cpp
-    - topo-sort.cpp
     - floyd-warshall.cpp
     - dijkstra.cpp
     - kruskal_tree.cpp
@@ -64,6 +61,10 @@ content:
     - ahld.cpp
     - lca.cpp
     - bellman-ford.cpp
+    - dfs:
+      - dfs.cpp
+      - dfs-iterative.cpp
+      - topo-sort.cpp
 
   - geometry:
     - point-2d.cpp
