@@ -3,7 +3,7 @@
  *Complejidad:* $O(n)$
 */
 vector<int> prefix_function(const string &s) {
-  int n = s.size();
+  int n = sz(s);
   vector<int> pi(n, 0);
   for (int i = 1; i < n; i++) {
     int j = pi[i - 1];

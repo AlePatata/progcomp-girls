@@ -6,7 +6,7 @@ template<class T>
 struct rolling_hashing {
   vector<ll> base, mod; int n, k;
   vector<vector<ll>> p, H;
-  rolling_hashing(T s, vector<ll> b, vector<ll> m): base(b), mod(m), n(s.size()), k(b.size()) {
+  rolling_hashing(T s, vector<ll> b, vector<ll> m): base(b), mod(m), n(sz(s)), k(sz(b)) {
     p.resize(k); H.resize(k);
     for (int j = 0; j < k; j++) {
       p[j].assign(n + 1, 1);

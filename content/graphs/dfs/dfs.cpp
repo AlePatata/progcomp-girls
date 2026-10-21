@@ -6,13 +6,13 @@
  *Complejidad:* $O(V + E)$
  *Status:* Tested
 */
-vector<vector<int>> adj;
-vector<bool> visited;
+vector<vector<int>> gr;
+vector<bool> vis;
 
 void dfs(int s) {
-  visited[s] = true;
+  vis[s] = true;
   // pre-orden: procesar s al entrar
-  for (int u : adj[s])
-    if (!visited[u]) dfs(u);
+  for (int u : gr[s])
+    if (!vis[u]) dfs(u);
   // post-orden: procesar s al salir, todos sus descendientes ya terminaron
 }

@@ -1,31 +1,19 @@
 /*
  *Description:* Valor del MST in $O(E log E)$
+ - `gr[u]` contiene pares `{v, w}`: arista `u - v` con peso `w`
  *NEED:* UNION_FIND
  *Status:* Tested
 */
-struct Edge {
-  int a; int b; int w;
-  Edge(int a_, int b_, int w_) : a(a_), b(b_), w(w_) {}
-};
-bool c_edge(Edge &a, Edge &b) { return a.w < b.w; }
-int Kruskal() {
-  int n = G.size();
-  union_find sets(n);
-  vector< Edge > edges;
-  for(int i = 0; i < n; i++) {
-    for(auto eg : G[i]) {
-      // node i to node eg.first with cost eg.second
-      edges.emplace_back(i, eg.first, eg.second);
-    }
-  }
-  sort(edges.begin(), edges.end(), c_edge);
-  int min_cost = 0;
-  for(Edge e : edges) {
-    if(sets.sameSet(e.a, e.b) != true) {
-      tree.emplace_back(e.a, e.b, e.w);
-      min_cost += e.w;
-      sets.unionSet(e.a, e.b);
-    }
-  }
-  return min_cost;
+ll kruskal_value(vector<vector<pii>> &gr) {
+  int n = sz(gr);
+  vector<array<int, 3>> edges; // {w, u, v}
+  for (int u = 0; u < n; u++)
+    for (auto [v, w] : gr[u])
+      edges.push_back({w, u, v});
+  sort(edges.begin(), edges.end());
+  union_find uf(n);
+  ll cost = 0;
+  for (auto [w, u, v] : edges)
+    if (uf.unionSet(u, v)) cost += w; // la arista u - v queda en el MST
+  return cost;
 }

@@ -5,9 +5,9 @@
 template<class T>
 struct rolling_hashing {
   int base, mod;
-  vector<long long> p, H;
+  vector<ll> p, H;
   int n;
-  rolling_hashing(const T &s, int b, int m): base(b), mod(m), n(s.size()) {
+  rolling_hashing(const T &s, int b, int m): base(b), mod(m), n(sz(s)) {
     p.assign(n+1, 1);
     H.assign(n+1, 0);
     for (int i = 0; i < n; ++i) {

@@ -7,7 +7,7 @@ template<class T> struct KMP {
   KMP(T &pat): pattern(pat) {
     lps.resize(pat.size(), 0);
     int len = 0, i = 1;
-    while (i < pattern.size()) {
+    while (i < sz(pattern)) {
       if (pattern[i] == pattern[len])
         lps[i++] = ++len;
       else {
@@ -19,10 +19,10 @@ template<class T> struct KMP {
   vector<int> search(T &text) {
     vector<int> matches;
     int i = 0, j = 0;
-    while (i < text.size()) {
+    while (i < sz(text)) {
       if (pattern[j] == text[i]) {
         i++, j++;
-        if (j == pattern.size()) {
+        if (j == sz(pattern)) {
           matches.push_back(i - j);
           j = lps[j - 1];
         }

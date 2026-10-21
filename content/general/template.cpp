@@ -3,10 +3,12 @@
 */
 #include<bits/stdc++.h>
 using namespace std;
-using pii = array<int,2>
+using pii = array<int,2>;
 typedef long long ll;
 
-#define sz(a) ((int)a.size())
+#define sz(a) ((int)(a).size())
+const int INF = 1e9;
+const int mod = 1e9 + 7;
 const long double pi = acos(-1);
 
 int main() {

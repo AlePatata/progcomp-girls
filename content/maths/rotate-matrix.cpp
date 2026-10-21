@@ -4,9 +4,8 @@
 */
 
 template <class T>
-// clockwise
 void rotate(vector<vector<T>> &a) {
-  int n = a.size();
+  int n = sz(a);
   vector<vector<T>> mat(n, vector<T>(n));
   for (int i = 0; i < n; i++) {
     for (int j = 0; j < n; j++) {

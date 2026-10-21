@@ -9,7 +9,7 @@ struct persistent_segment_tree {
   int n, rt;
   persistent_segment_tree(int n): ST(1, T()), L(1, 0), R(1, 0), n(n), rt(0) {}
   int new_node(T v, int l = 0, int r = 0) {
-    int ks = ST.size();
+    int ks = sz(ST);
     ST.push_back(v); L.push_back(l); R.push_back(r);
     return ks;
   }

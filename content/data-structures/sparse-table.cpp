@@ -10,7 +10,7 @@ struct sparse_table {
   vector<vector<T>> table;
   sparse_table() {}
   sparse_table(vector<T> &arr) {
-    n = arr.size();
+    n = sz(arr);
     int k = log2_floor(n) + 1;
     table.assign(n, vector<T>(k));
     for (int i = 0; i < n; i++)

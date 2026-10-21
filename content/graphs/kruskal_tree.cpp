@@ -1,28 +1,21 @@
 /*
  *Description*: Retorna la construcción de un MST
+ - `gr[u]` contiene pares `{v, w}`: arista `u - v` con peso `w`
  *NEED*: UNION_FIND
 */
-
-typedef pair<ll,ll> ii;
-typedef pair<ll,ii> iii;
-
-vector<vector<ii>> kruskal(vector<vector<ii>> &gr){ 
+vector<vector<pii>> kruskal(vector<vector<pii>> &gr) {
   int n = sz(gr);
-  vector<vector<ii>> ans(n);
-  vector<iii> edges;
-  for (int i=0;i<n;i++){
-    for (int j=0;j<sz(gr[i]); j++){
-      edges.emplace_back(gr[i][j].second,ii{i,gr[i][j].first});
-    }
-  }
-  sort(edges.begin(),edges.end());
+  vector<vector<pii>> ans(n);
+  vector<array<int, 3>> edges; // {w, u, v}
+  for (int u = 0; u < n; u++)
+    for (auto [v, w] : gr[u])
+      edges.push_back({w, u, v});
+  sort(edges.begin(), edges.end());
   union_find uf(n);
-  for (int i=0;i<sz(edges);i++){
-    ll repa = uf.findSet(edges[i].second.first), repb = uf.findSet(edges[i].second.second);
-    if (repa!=repb){
-      ans[edges[i].second.first].emplace_back(edges[i].second.second, edges[i].first);
-      ans[edges[i].second.second].emplace_back(edges[i].second.first, edges[i].first);
-      uf.unionSet(repa,repb);
+  for (auto [w, u, v] : edges) {
+    if (uf.unionSet(u, v)) {
+      ans[u].push_back({v, w});
+      ans[v].push_back({u, w});
     }
   }
   return ans;

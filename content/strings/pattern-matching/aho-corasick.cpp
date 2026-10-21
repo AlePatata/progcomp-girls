@@ -12,20 +12,19 @@ struct AhoCorasick {
       for (int i = 0; i < 26; i++) next[i] = -1, go[i] = -1;
     }
   };
-  vector<Vertex> t(1);
+  vector<Vertex> t = vector<Vertex>(1);
   void add(string &s, int id) {
     int v = 0;
     for (char ch : s) {
       int c = ch - 'a';
       if (t[v].next[c] == -1) {
-        t[v].next[c] = t.size();
+        t[v].next[c] = sz(t);
         t.emplace_back(v, ch);
       }
       v = t[v].next[c];
     }
     t[v].leaf.push_back(id);
   }
-  int go(int v, char ch);
   int get_link(int v) {
     if (t[v].link == -1) {
       if (v == 0 || t[v].p == 0) t[v].link = 0;
@@ -41,5 +40,5 @@ struct AhoCorasick {
     }
     return t[v].go[c];
   }
-}
+};
 

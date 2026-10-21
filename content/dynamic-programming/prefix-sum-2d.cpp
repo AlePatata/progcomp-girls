@@ -7,7 +7,7 @@
 template <class T> struct prefix_sum_2d {
   vector<vector<T>> p;
   prefix_sum_2d(const vector<vector<T>> &a) {
-    int n = a.size(), m = a[0].size();
+    int n = sz(a), m = sz(a[0]);
     p.assign(n + 1, vector<T>(m + 1, 0));
     // arriba + izquierda - esquina (contada dos veces) + celda
     for (int i = 0; i < n; i++)

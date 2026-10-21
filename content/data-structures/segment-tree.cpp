@@ -6,7 +6,7 @@ template<class T, T m_(T, T)> struct segment_tree{
   int n; vector<T> ST;
   segment_tree(){}
   segment_tree(vector<T> &a){
-    n = a.size(); ST.resize(n << 1);
+    n = sz(a); ST.resize(n << 1);
     for (int i=n;i<(n<<1);i++)ST[i]=a[i-n];
     for (int i=n-1;i>0;i--)ST[i]=m_(ST[i<<1],ST[i<<1|1]);
   }

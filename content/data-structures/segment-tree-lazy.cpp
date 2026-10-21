@@ -27,7 +27,7 @@ struct segment_tree_lazy{
   }
   segment_tree_lazy() {}
   segment_tree_lazy(vector<T1>&values){
-    n = values.size(); ST.resize(n << 2 | 3);
+    n = sz(values); ST.resize(n << 2 | 3);
     lazy.resize(n << 2 | 3); upd.resize(n << 2 | 3, false);
     build(1, 0, n - 1, values);
   }

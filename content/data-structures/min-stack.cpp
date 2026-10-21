@@ -14,4 +14,5 @@ struct min_stack {
   void pop() { S.pop(); }
   T top() { return S.top().first; }
   T getMin() { return S.top().second; }
+  void swap(min_stack &o) { S.swap(o.S); }
 };

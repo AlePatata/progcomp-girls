@@ -6,7 +6,7 @@ template<class T>
 struct manacher {
   vector<int> odd, even;
   T s; int n;
-  manacher(T &s): s(s), n(s.size()) {
+  manacher(T &s): s(s), n(sz(s)) {
     odd.resize(n);
     even.resize(n);
     for (int i = 0, l = 0, r = -1; i < n; i++) {
@@ -23,7 +23,7 @@ struct manacher {
     }
   }
   // Returns the longest palindrome centered at i
-  pair<int, int> get(int i) {
+  pii get(int i) {
     int o = 2 * odd[i] - 1;   // Normally centered (Is odd size)
     int e = 2 * even[i];      // Centered to the right
     if (o >= e)
