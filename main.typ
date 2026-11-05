@@ -13,7 +13,7 @@
 // Portada
 #[
   #set align(center + horizon)
-  #image("img/ranita.png")
+  #image("img/rana.png")
   #text(size: 2.5em)[Apunte popcorn]
 
   #if "version" in sys.inputs [Versión #sys.inputs.version]
