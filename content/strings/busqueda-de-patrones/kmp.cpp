@@ -1,35 +1,19 @@
 /*
-  *Descripción:* Encuentra las ocurrencias de un patrón en un texto, en $O(n + m)$, donde $n$ y $m$ son los largos del texto y del patrón respectivamente.
+ *Descripcion:* pi[x] computa el largo del prefijo más largo de $s$ que termina en $x$, other than s[0...x] itself (abacaba $->$ 0010123). Puede ser usado para encontrar todas las ocurrencias de un string.
+ *Complejidad:* $0(n)$ 
 */
-template<class T> struct KMP {
-  T pattern; vector<int> lps;
-  KMP(T &pat): pattern(pat) {
-    lps.resize(pat.size(), 0);
-    int len = 0, i = 1;
-    while (i < sz(pattern)) {
-      if (pattern[i] == pattern[len])
-        lps[i++] = ++len;
-      else {
-        if (len != 0) len = lps[len - 1];
-        else lps[i++] = 0;
-      }
-    }
+vector<int> pi(const string &s) {
+  vector<int> p(sz(s));
+  for(int i=1;i<sz(s);++i){
+    int g = p[i - 1];
+    while (g && s[i] != s[g]) g = p[g - 1];
+    p[i] = g + (s[i] == s[g]);
   }
-  vector<int> search(T &text) {
-    vector<int> matches;
-    int i = 0, j = 0;
-    while (i < sz(text)) {
-      if (pattern[j] == text[i]) {
-        i++, j++;
-        if (j == sz(pattern)) {
-          matches.push_back(i - j);
-          j = lps[j - 1];
-        }
-      } else {
-        if (j != 0) j = lps[j - 1];
-        else i++;
-      }
-    }
-    return matches;
-  }
-};
+  return p;
+}
+vector<int> match(const string &s, const string &pat) {
+  vector<int> p = pi(pat + '\0' + s), res;
+  for (int i=sz(p)-sz(s); i<sz(p);++i)  
+    if (p[i] == sz(pat)) res.push_back(i - 2 * sz(pat));
+  return res;
+}
