@@ -74,12 +74,21 @@ content:
     - ahld.cpp
     - lca.cpp
     - bellman-ford.cpp
+    - 2-sat.cpp
     - dfs:
       - dfs.cpp
       - dfs-iterativo.cpp
       - orden-topologico.cpp
+      - kosaraju.cpp
+      - funciones-kosaraju.cpp
+      - puentes.cpp
+      - puntos-de-articulacion.cpp
     - flow:
       - dinic.cpp
+      - push-relabel.cpp
+      - hopcroft-karp.cpp
+      - flow-demands.cpp
+      - mfmc.cpp 
 
   - geometry:
     - punto-2d.cpp
@@ -111,4 +120,5 @@ content:
     - removing-digits.cpp
     - stones.cpp
     - huevos.cpp
+    - divine-gifting.cpp
 
