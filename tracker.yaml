@@ -86,6 +86,7 @@ content:
       - dinic.cpp
       - hopcroft-karp.cpp
       - flow-demands.cpp
+      - mfmc.cpp 
 
   - geometry:
     - punto-2d.cpp
