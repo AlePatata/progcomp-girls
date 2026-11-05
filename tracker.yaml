@@ -5,6 +5,7 @@ content:
     - tiempo-de-ejecucion.typ
     - getline.typ
     - numeros-aleatorios.cpp
+    - primos.typ 
     - busqueda-binaria.cpp
     - busqueda-ternaria.cpp
     - lower-y-upper-bound.typ
