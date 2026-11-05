@@ -1,7 +1,7 @@
 /*
 *Descripción:* Retorna los largos de todos los bordes, ordenados de menor a mayor.Un borde es un prefijo propio que también es sufijo de una string.
 *Complejidad:* O(n)
-*Requiere de Prefix-function
+*Requiere:* Prefix-function
 */
 
 vector<int> borders(const string &s) {

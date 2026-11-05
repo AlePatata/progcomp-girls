@@ -81,7 +81,8 @@
     } else {
       it + "\\"
     })
-    .join().trim()
+    // Unir con espacio: si no, "linea\" + "*Algo:*" queda como "\*" (asterisco escapado).
+    .join(" ").trim()
 }
 
 #let remove-description-from-code(string) = {
