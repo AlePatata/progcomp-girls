@@ -16,6 +16,9 @@ content:
       - rolling-hashing.cpp
       - k-rolling-hashing.cpp
       - funcion-prefijo.cpp
+      - bordes.cpp
+      - minPeriod.cpp
+      - exactPeriod.cpp
       - z-function.cpp
       - kmp.cpp
       - aho-corasick.cpp
