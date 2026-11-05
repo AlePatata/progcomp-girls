@@ -74,6 +74,7 @@ content:
     - ahld.cpp
     - lca.cpp
     - bellman-ford.cpp
+    - 2-sat.cpp
     - dfs:
       - dfs.cpp
       - dfs-iterativo.cpp
